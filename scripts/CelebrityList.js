@@ -22,7 +22,15 @@ export const Celebrities = () => {
 document.addEventListener(
     "click",
     (clickEvent) => {
-        itemClicked = clickEvent.target
-        
+        const itemClicked = clickEvent.target
+
+        if(itemClicked.dataset.type === "celebrity") {
+            const celebData = getCelebrities()
+        for (const celeb of celebData) {
+            if (celeb.id === parseInt(itemClicked.dataset.id)){
+                window.alert(`${celeb.name} is a ${celeb.sport} star`)
+                }
+            }
+        }
     }
 )
