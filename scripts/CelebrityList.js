@@ -18,3 +18,11 @@ export const Celebrities = () => {
     html += "</ol>"
     return html
 }
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        itemClicked = clickEvent.target
+        
+    }
+)
